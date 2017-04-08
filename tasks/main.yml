@@ -1,0 +1,6 @@
+---
+- include: prerequisites.yml
+- include: download.yml
+- include: configure.yml
+- include: make.yml
+- include: firewall.yml

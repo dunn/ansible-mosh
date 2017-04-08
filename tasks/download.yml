@@ -1,0 +1,17 @@
+---
+- name: download mosh
+  get_url:
+    checksum: sha256:{{ mosh_sha }}
+    dest: "{{ download_dir }}"
+    url: https://mosh.org/mosh-{{ mosh_ver }}.tar.gz
+
+- name: ensure {{ build_dir }} exists
+  file:
+    path: "{{ build_dir }}"
+    state: directory
+
+- name: unpack mosh
+  unarchive:
+    dest: "{{ build_dir }}/"
+    remote_src: yes
+    src: "{{ download_dir }}/mosh-{{ mosh_ver }}.tar.gz"

@@ -1,0 +1,5 @@
+---
+- name: make install
+  command: make install
+  args:
+    chdir: "{{ build_dir }}/mosh-{{ mosh_ver }}"

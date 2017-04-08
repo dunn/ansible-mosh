@@ -1,0 +1,9 @@
+---
+- name: configure mosh
+  command: ./configure \
+             --disable-client \
+             --disable-dependency-tracking \
+             --enable-completion \
+             --enable-hardening
+  args:
+    chdir: "{{ build_dir }}/mosh-{{ mosh_ver }}"

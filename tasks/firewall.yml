@@ -1,0 +1,15 @@
+---
+- name: enable firewalld
+  systemd:
+    enabled: yes
+    name: firewalld
+    state: started
+
+- name: add mosh to firewalld allowed services
+  command: firewall-cmd \
+             --add-service=mosh \
+             --permanent \
+             --zone=public
+
+- name: reload firewalld
+  command: firewall-cmd --reload
