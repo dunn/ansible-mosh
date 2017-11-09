@@ -1,6 +1,6 @@
 ---
-mosh_ver: 1.3.0
-mosh_sha: 320e12f461e55d71566597976bd9440ba6c5265fa68fbf614c6f1c8401f93376
+mosh_ver: 1.3.2
+mosh_sha: da600573dfa827d88ce114e0fed30210689381bbdcff543c931e4d6a2e851216
 
 download_dir: /tmp
 build_dir: /tmp/mosh-{{ mosh_ver }}-build
